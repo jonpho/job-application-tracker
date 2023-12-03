@@ -1,0 +1,44 @@
+<div id="<%= dom_id company %>">
+  <p>
+    <strong>Date applied:</strong>
+    <%= company.date_applied %>
+  </p>
+
+  <p>
+    <strong>Company name:</strong>
+    <%= company.company_name %>
+  </p>
+
+  <p>
+    <strong>Application status:</strong>
+    <%= company.application_status %>
+  </p>
+
+  <p>
+    <strong>Job title:</strong>
+    <%= company.job_title %>
+  </p>
+
+  <p>
+    <strong>Company ats link:</strong>
+    <%= company.company_ats_link %>
+  </p>
+
+  <p>
+    <strong>Referral:</strong>
+    <%= company.referral %>
+  </p>
+  <p>
+    <strong>Company Notes:</strong>
+    <%= link_to "Create Note", new_company_note_path(company.id) %>
+    <% company.notes.each do |note| %>
+    <p>
+      <strong>Date:</strong>
+      <%= note.date %>
+      <strong>Job Application Note:</strong>
+      <%= note.job_application_note %>
+    </p>
+    <% end %>
+  </p>
+
+</div>
