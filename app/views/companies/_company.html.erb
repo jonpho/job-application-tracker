@@ -1,26 +1,26 @@
 <div id="<%= dom_id company %>">
   <p>
-    <strong>Date applied:</strong>
+    <strong>Date Applied:</strong>
     <%= company.date_applied %>
   </p>
 
   <p>
-    <strong>Company name:</strong>
+    <strong>Company Name:</strong>
     <%= company.company_name %>
   </p>
 
   <p>
-    <strong>Application status:</strong>
+    <strong>Application Status:</strong>
     <%= company.application_status %>
   </p>
 
   <p>
-    <strong>Job title:</strong>
+    <strong>Job Title:</strong>
     <%= company.job_title %>
   </p>
 
   <p>
-    <strong>Company ats link:</strong>
+    <strong>Company ATS Link:</strong>
     <%= company.company_ats_link %>
   </p>
 
@@ -29,16 +29,13 @@
     <%= company.referral %>
   </p>
   <p>
+    <strong>Company Note Count:</strong>
+    <%= company.notes.count %>
+  </p>
+  <p>
     <strong>Company Notes:</strong>
+    <%= link_to "Show Company Notes", company_notes_path(company) %> | 
     <%= link_to "Create Note", new_company_note_path(company.id) %>
-    <% company.notes.each do |note| %>
-    <p>
-      <strong>Date:</strong>
-      <%= note.date %>
-      <strong>Job Application Note:</strong>
-      <%= note.job_application_note %>
-    </p>
-    <% end %>
   </p>
 
 </div>

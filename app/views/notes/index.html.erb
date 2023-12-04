@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Notes</h1>
+<h1>Company Notes</h1>
 
 <div id="notes">
   <% @notes.each do |note| %>
     <%= render note %>
     <p>
-      <%= link_to "Show this note", company_note_path(note.company_id, note) %>
+      <%= link_to "Show this note", company_note_path(@company, note) %>
     </p>
   <% end %>
 </div>
 
+<%= link_to "Back to Companies", companies_path %> | 
 <%= link_to "New note", new_company_note_path %>

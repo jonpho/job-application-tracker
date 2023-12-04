@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Companies</h1>
+<h1>Companies List</h1>
+
+<p>
+  <%= link_to "Add New Company", new_company_path %>
+</p>
 
 <div id="companies">
   <% @companies.each do |company| %>
@@ -10,5 +14,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New company", new_company_path %>
