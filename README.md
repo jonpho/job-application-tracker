@@ -1,24 +1,18 @@
-# README
+# Job Application Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was created to make tracking your submitted job applications easier.
 
-Things you may want to cover:
+## Tech Stack
 
-* Ruby version
+* Ruby on Rails
+* SQLite
+* React-Bootstrap (TODO)
+* Docker (TODO)
 
-* System dependencies
+## Directions to Run
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. `bundle install`
+2. `rails db:create`
+3. `rails db:migrate`
+4. `rails start`
+5. Navigate to `http://localhost:3000/companies`
